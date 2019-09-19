@@ -28,3 +28,9 @@ class ListaDuplamenteLigada:
         for i in range(0, self.quantidade):
             print(atual.conteudo)
             atual = atual.proximo
+
+    def _inserir_em_lista_vazia(self, conteudo):
+        celula = Celula(conteudo)
+        self._inicio = celula
+        self._fim = celula
+        self._quantidade += 1

@@ -29,6 +29,7 @@ def main():
     loja10 = Loja("Mercado do Campo", "Rua da Fazenda, 1500")
 
     lista = ListaDuplamenteLigada()
+    lista._inserir_em_lista_vazia(loja1)
     situacao(lista)
 
 
