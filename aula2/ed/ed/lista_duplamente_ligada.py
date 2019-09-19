@@ -84,3 +84,21 @@ class ListaDuplamenteLigada:
         for i in range(posicao+1, self.quantidade)[::-1]:
             atual = atual.anterior
         return atual
+
+    def _remover_ultimo(self):
+        if self.quantidade == 1:
+            removido = self.inicio
+            self._inicio = None
+            self._fim = None
+            self._quantidade -= 1
+            return removido.conteudo
+
+    def remover_do_inicio(self):
+        if self.quantidade == 1:
+            return self._remover_ultimo()
+        removido = self.inicio
+        self._inicio = removido.proximo
+        self._inicio.anterior = None
+        removido.proximo = None
+        self._quantidade -= 1
+        return removido.conteudo

@@ -59,4 +59,8 @@ def main():
     lista.inserir(6, loja10)
     situacao(lista)
 
+    removido = lista.remover_do_inicio()
+    print("Removido do início: {}".format(removido))
+    situacao(lista)
+
 main()
