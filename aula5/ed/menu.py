@@ -24,4 +24,15 @@ def main():
     livraria.inserir_nodo("Gastronomia", "Bebidas")
     livraria.imprimir()
 
+    removido = livraria.remover_nodo("Bebidas")
+    print("Removido: {}".format(removido))
+
+    removido = livraria.remover_nodo("Informática")
+    print("Removido: ")
+    removido.imprimir()
+
+    print("Livraria")
+    livraria.imprimir()
+
+
 main()

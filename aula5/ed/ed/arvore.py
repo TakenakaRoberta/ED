@@ -20,6 +20,13 @@ class ListaDeNodos(ListaDuplamenteLigada):
                 return encontrado
             atual = atual.proximo
 
+    def posicao(self, conteudo):
+        atual = self.inicio
+        for i in range(0, self.quantidade):
+            if atual.conteudo.conteudo == conteudo:
+                return i
+            atual = atual.proximo
+
 
 class Nodo:
 
@@ -49,6 +56,12 @@ class Nodo:
         if self.filhos:
             return self.filhos.localizar_nodo(conteudo)
 
+    def remover(self):
+        if self.pai:
+            posicao = self.pai.filhos.posicao(self.conteudo)
+            return self.pai.filhos.remover(posicao)
+        return self
+
 
 class Arvore:
 
@@ -65,3 +78,12 @@ class Arvore:
         nodo_pai = self.localizar_nodo(pai)
         if nodo_pai:
             nodo_pai.inserir_filho(filho)
+
+    def remover_nodo(self, conteudo):
+        encontrado = self.raiz.localizar_nodo(conteudo)
+        if encontrado:
+            if encontrado is self.raiz:
+                self.raiz = None
+            else:
+                encontrado.remover()
+        return encontrado
