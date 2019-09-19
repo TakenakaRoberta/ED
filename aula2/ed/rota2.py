@@ -30,37 +30,39 @@ def main():
 
     lista = ListaDuplamenteLigada()
     lista.inserir_no_inicio(loja1)
-    situacao(lista)
-
     lista.inserir_no_inicio(loja2)
-    situacao(lista)
-
     lista.inserir_no_inicio(loja3)
-    situacao(lista)
-
     lista.inserir_no_fim(loja4)
-    situacao(lista)
-
     lista.inserir_no_fim(loja5)
-    situacao(lista)
-
     lista.inserir_no_fim(loja6)
-    situacao(lista)
-
     lista.inserir(2, loja7)
-    situacao(lista)
-
     lista.inserir(7, loja8)
-    situacao(lista)
-
     lista.inserir(0, loja9)
-    situacao(lista)
-
     lista.inserir(6, loja10)
     situacao(lista)
 
     removido = lista.remover_do_inicio()
     print("Removido do início: {}".format(removido))
+    situacao(lista)
+
+    removido = lista.remover_do_fim()
+    print("Removido do fim: {}".format(removido))
+    situacao(lista)
+
+    removido = lista.remover(1)
+    print("Removido da posição 1: {}".format(removido))
+    situacao(lista)
+
+    removido = lista.remover(5)
+    print("Removido da posição 5: {}".format(removido))
+    situacao(lista)
+
+    removido = lista.remover(0)
+    print("Removido da posição 0: {}".format(removido))
+    situacao(lista)
+
+    removido = lista.remover(4)
+    print("Removido da posição 4: {}".format(removido))
     situacao(lista)
 
 main()
