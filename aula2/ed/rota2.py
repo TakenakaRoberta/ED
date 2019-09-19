@@ -47,4 +47,16 @@ def main():
     lista.inserir_no_fim(loja6)
     situacao(lista)
 
+    lista.inserir(2, loja7)
+    situacao(lista)
+
+    lista.inserir(7, loja8)
+    situacao(lista)
+
+    lista.inserir(0, loja9)
+    situacao(lista)
+
+    lista.inserir(6, loja10)
+    situacao(lista)
+
 main()
