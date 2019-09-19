@@ -52,3 +52,24 @@ class ListaLigada:
             return True
         raise IndexError(
             "Posição inválida {}".format(posicao))
+
+    def remover_do_inicio(self):
+        removido = self._inicio
+        self._inicio = self._inicio.proximo
+        removido.proximo = None
+        self._quantidade -= 1
+        return removido.conteudo
+
+    def remover(self, posicao):
+        if posicao == 0:
+            return self.remover_do_inicio()
+        celula_anterior = self._celula(posicao - 1)
+        removido = celula_anterior.proximo
+        celula_anterior.proximo = removido.proximo
+        removido.proximo = None
+        self._quantidade -= 1
+        return removido.conteudo
+
+    def item(self, posicao):
+        celula = self._celula(posicao)
+        return celula.conteudo

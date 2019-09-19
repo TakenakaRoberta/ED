@@ -18,26 +18,39 @@ def main():
     loja5 = Loja("Mini mercado da Fazenda", "Rua da Fazenda, 98")
 
     lista = ListaLigada()
-    print(lista.quantidade)
-    lista.imprimir()
-
     lista.inserir_no_inicio(loja1)
-    print(lista.quantidade)
-    lista.imprimir()
-
     lista.inserir_no_inicio(loja2)
-    print(lista.quantidade)
-    lista.imprimir()
-
     lista.inserir(2, loja3)
-    print(lista.quantidade)
-    lista.imprimir()
-
     lista.inserir(0, loja4)
+    lista.inserir(1, loja5)
+
+    print(lista.quantidade)
+    lista.imprimir()
+    removido = lista.remover_do_inicio()
+    print("\nRemovido: {}".format(removido))
+    print("")
+
+    print(lista.quantidade)
+    lista.imprimir()
+    removido = lista.remover(2)
+    print("\nRemovido: {}".format(removido))
+    print("")
     print(lista.quantidade)
     lista.imprimir()
 
-    lista.inserir(1, loja5)
+    print(lista.quantidade)
+    lista.imprimir()
+    removido = lista.remover(2)
+    print("\nRemovido: {}".format(removido))
+    print("")
+    print(lista.quantidade)
+    lista.imprimir()
+
+    print(lista.quantidade)
+    lista.imprimir()
+    removido = lista.remover(0)
+    print("\nRemovido: {}".format(removido))
+    print("")
     print(lista.quantidade)
     lista.imprimir()
 
