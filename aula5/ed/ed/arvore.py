@@ -28,6 +28,14 @@ class Nodo:
         if self.filhos:
             self.filhos.imprimir(nivel+1)
 
+    def inserir_filho(self, filho):
+
+        if self.filhos is None:
+            self.filhos = ListaDeNodos()
+        nodo = Nodo(filho)
+        nodo.pai = self
+        self.filhos.inserir_no_fim(nodo)
+
 
 class Arvore:
 
