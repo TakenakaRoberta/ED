@@ -23,3 +23,9 @@ class ListaLigada:
         for i in range(0, self.quantidade):
             print(celula_atual.conteudo)
             celula_atual = celula_atual.proximo
+
+    def inserir_no_inicio(self, conteudo):
+        celula = Celula(conteudo)
+        celula.proximo = self._inicio
+        self._inicio = celula
+        self._quantidade += 1
