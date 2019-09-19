@@ -29,5 +29,16 @@ def main():
     print(lista.quantidade)
     lista.imprimir()
 
+    lista.inserir(2, loja3)
+    print(lista.quantidade)
+    lista.imprimir()
+
+    lista.inserir(0, loja4)
+    print(lista.quantidade)
+    lista.imprimir()
+
+    lista.inserir(1, loja5)
+    print(lista.quantidade)
+    lista.imprimir()
 
 main()
